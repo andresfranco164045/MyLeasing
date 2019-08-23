@@ -376,7 +376,7 @@ namespace MyLeasing.Web.Controllers
                 Lessees = _combosHelper.GetComboLessees(),
                 Price = property.Price,
                 StartDate = DateTime.Today,
-                EndDate = DateTime.Today.AddYears(1),
+                EndDate = DateTime.Today.AddYears(1)
             };
 
             return View(model);
