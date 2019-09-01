@@ -11,7 +11,6 @@ namespace MyLeasing.Web.Data.Entities
 
         public Property Property { get; set; }
 
-        // TODO: Change the path when publish
         public string ImageFullPath => string.IsNullOrEmpty(ImageUrl)
             ? "https://myleasingfranco.azurewebsites.net/images/Properties/noImage.png"
             : $"https://myleasingfranco.azurewebsites.net{ImageUrl.Substring(1)}";
