@@ -37,6 +37,7 @@ namespace MyLeasing.Prism
             containerRegistry.RegisterForNavigation<PropertiesPage, PropertiesPageViewModel>();
 containerRegistry.RegisterForNavigation<PropertyPage, PropertyPageViewModel>(); containerRegistry.RegisterForNavigation<ContractsPage, ContractsPageViewModel>();
             containerRegistry.RegisterForNavigation<ContractPage, ContractPageViewModel>();
+            containerRegistry.RegisterForNavigation<PropertyTabbedPage, PropertyTabbedPageViewModel>();
         }
     }
 }

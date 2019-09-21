@@ -23,12 +23,9 @@ namespace MyLeasing.Prism.ViewModels
 
         private async void SelectProperty()
         {
-            var parameters = new NavigationParameters
-            {
-                { "property", this }
-            };
+            Settings.Property = JsonConvert.SerializeObject(this);
 
-            await _navigationService.NavigateAsync("ContractsPage", parameters);
+            await _navigationService.NavigateAsync("PropertyTabbedPage");
         }
     }
 }

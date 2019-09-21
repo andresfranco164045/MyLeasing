@@ -1,4 +1,6 @@
-﻿using MyLeasing.Common.Models;
+﻿using MyLeasing.Common.Helpers;
+using MyLeasing.Common.Models;
+using Newtonsoft.Json;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
@@ -14,10 +16,9 @@ namespace MyLeasing.Prism.ViewModels
         private PropertyResponse _property;
         private ObservableCollection<RotatorModel> _imageCollection;
 
-        public PropertyPageViewModel(
-            INavigationService navigationService ) : base(navigationService)
+        public PropertyPageViewModel(INavigationService navigationService ) : base(navigationService)
         {
-            Title = "Property";
+            Title = "Details";
         }
 
         public ObservableCollection<RotatorModel> ImageCollection
@@ -35,13 +36,8 @@ namespace MyLeasing.Prism.ViewModels
         public override void OnNavigatedTo(INavigationParameters parameters)
         {
             base.OnNavigatedTo(parameters);
-
-            if (parameters.ContainsKey("property"))
-            {
-                Property = parameters.GetValue<PropertyResponse>("property");
-                Title = $"Property {Property.Neighborhood}";
-                LoadImages();
-            }
+            Property = JsonConvert.DeserializeObject<PropertyResponse>(Settings.Property);
+            LoadImages();
         }
 
         private void LoadImages()

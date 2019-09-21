@@ -73,7 +73,7 @@
                     Grid.Row="4"
                     Grid.Column="0"
                     FontAttributes="Bold"
-                    Text="End Date"/>
+                    Text="Remarks"/>
                 <Label
                     Grid.Row="4"
                     Grid.Column="1"
