@@ -22,7 +22,10 @@ namespace MyLeasing.Prism
 
         protected override async void OnInitialized()
         {
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTQyNjc5QDMxMzcyZTMyMmUzMGRWRW1QVmgwZnQvN2VTeThXSmRhdkFoT21nYjFabUE1WkJzZXhrcVk2QWM9");
+            //Trial License
+            //Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTQyNjc5QDMxMzcyZTMyMmUzMGRWRW1QVmgwZnQvN2VTeThXSmRhdkFoT21nYjFabUE1WkJzZXhrcVk2QWM9");
+            //Comunity License
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTQ2MTQ4QDMxMzcyZTMyMmUzME9PSjdTRlg3MTF3aTNVQlU3dmQrcUtyTE9mVTV2MTJEaWhsakhTRE9iVUU9;MTQ2MTQ5QDMxMzcyZTMyMmUzMFVZdWxLNE9BVnEyNGJocTFQZ0tSY0hwV1FMSkZDbVhPNDIwcDJscTU4RWM9;MTQ2MTUwQDMxMzcyZTMyMmUzMFo5S1QzaHFnN3FJanBZb3QzRjFLZVdOWTE4SU1hakM3WGtTejZWam5rVW89;MTQ2MTUxQDMxMzcyZTMyMmUzMGVPM1g4R3FwVldjeE16RTI1eDE2YWgraXA4c0JZaVB1cmNCUUg5SUt1RE09;MTQ2MTUyQDMxMzcyZTMyMmUzMEkwVkhtQmc3eUJPaDYwWjhTRlBKUCtEWXRRamFqM3pFTjluYXNqamNKSmc9;MTQ2MTUzQDMxMzcyZTMyMmUzMElBVkhXYS9pb25YK3ZDWXFGaFlXejNXWjc0UThPNTBZSldPbjVBSHlVUUE9;MTQ2MTU0QDMxMzcyZTMyMmUzMFpmWGJPTS9KUWhwcVlkdzNkQzBCMkp5cUlDKzNEMWhqcVNQYjRIbTdneFU9;MTQ2MTU1QDMxMzcyZTMyMmUzMFJkUjR6WXhvOVRNTkpOOXFHYUlkaFl3ZXlBZjRuamZNSGNOZzB1bzZlMWM9;MTQ2MTU2QDMxMzcyZTMyMmUzMGNGTVV5N2huSms1b0RFZm1rT09qLzU0TUtSWFN4WEQ5ak5HeHQwcXZDQ3M9;MTQ2MTU3QDMxMzcyZTMyMmUzMEkwVkhtQmc3eUJPaDYwWjhTRlBKUCtEWXRRamFqM3pFTjluYXNqamNKSmc9");
 
             InitializeComponent();
 
