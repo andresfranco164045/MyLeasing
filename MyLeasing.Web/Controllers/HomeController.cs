@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyLeasing.Web.Data;
@@ -80,6 +81,25 @@ namespace MyLeasing.Web.Controllers
             }
 
             return View(property);
+        }
+
+        [Authorize(Roles = "Owner")]
+        public async Task<IActionResult> MyProperties()
+        {
+            var owner = await _dataContext.Owners
+                .Include(o => o.User)
+                .Include(o => o.Contracts)
+                .Include(o => o.Properties)
+                .ThenInclude(p => p.PropertyType)
+                .Include(o => o.Properties)
+                .ThenInclude(p => p.PropertyImages)
+                .FirstOrDefaultAsync(o => o.User.UserName.ToLower().Equals(User.Identity.Name.ToLower()));
+            if (owner == null)
+            {
+                return NotFound();
+            }
+
+            return View(owner);
         }
 
     }
