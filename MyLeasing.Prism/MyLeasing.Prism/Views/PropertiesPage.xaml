@@ -102,9 +102,9 @@
                                             IsEnabled="False"
                                             IsChecked="{Binding IsAvailable}"/>
                                     </Grid>
-                                    <Image
-                                        Grid.Column="1"
-                                        Source="ic_more_vert"/>
+                                        <Image
+                                            Grid.Column="1"
+                                            Source="ic_more_vert"/>
                                 </Grid>
                             </StackLayout>
                         </Frame>
