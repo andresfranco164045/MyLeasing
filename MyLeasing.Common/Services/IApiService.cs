@@ -41,5 +41,13 @@ namespace MyLeasing.Common.Services
             string tokenType,
             string accessToken);
 
+        Task<Response<object>> ChangePasswordAsync(
+            string urlBase,
+            string servicePrefix,
+            string controller,
+            ChangePasswordRequest changePasswordRequest,
+            string tokenType,
+            string accessToken);
+
     }
 }
