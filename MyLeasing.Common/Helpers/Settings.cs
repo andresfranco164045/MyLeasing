@@ -9,7 +9,9 @@ namespace MyLeasing.Common.Helpers
         private const string _propertyImages = "PropertyImages";
         private const string _token = "token";
         private const string _owner = "owner";
+        private const string _isRemembered = "IsRemembered";
         private static readonly string _stringDefault = string.Empty;
+        private static readonly bool _boolDefault = false;
 
         private static ISettings AppSettings => CrossSettings.Current;
 
@@ -35,6 +37,12 @@ namespace MyLeasing.Common.Helpers
         {
             get => AppSettings.GetValueOrDefault(_owner, _stringDefault);
             set => AppSettings.AddOrUpdateValue(_owner, value);
+        }
+
+        public static bool IsRemembered
+        {
+            get => AppSettings.GetValueOrDefault(_isRemembered, _boolDefault);
+            set => AppSettings.AddOrUpdateValue(_isRemembered, value);
         }
     }
 }

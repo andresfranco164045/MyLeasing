@@ -125,6 +125,7 @@ namespace MyLeasing.Prism.ViewModels
             //Send the Objects on Persistence
             Settings.Owner = JsonConvert.SerializeObject(owner);
             Settings.Token = JsonConvert.SerializeObject(token);
+            Settings.IsRemembered = IsRemember;
 
 
             await _navigationService.NavigateAsync("/LeasingMasterDetailPage/NavigationPage/PropertiesPage");
