@@ -2,6 +2,7 @@
 using MyLeasing.Common.Helpers;
 using MyLeasing.Common.Models;
 using MyLeasing.Common.Services;
+using MyLeasing.Prism.Helpers;
 using Newtonsoft.Json;
 using Prism.Commands;
 using Prism.Navigation;
@@ -62,13 +63,19 @@ namespace MyLeasing.Prism.ViewModels
         {
             if (string.IsNullOrEmpty(Email))
             {
-                await App.Current.MainPage.DisplayAlert("Error", "You Must Enter an Email.", "Accept");
+                await App.Current.MainPage.DisplayAlert(
+                    Languages.Error, 
+                    Languages.EmailError, 
+                    Languages.Accept);
                 return;
             }
 
             if (string.IsNullOrEmpty(Password))
             {
-                await App.Current.MainPage.DisplayAlert("Error", "You Must Enter a Password", "Accept");
+                await App.Current.MainPage.DisplayAlert(
+                    "Error", 
+                    "You Must Enter a Password", 
+                    "Accept");
                 return;
             }
 
@@ -81,7 +88,10 @@ namespace MyLeasing.Prism.ViewModels
             {
                 IsEnabled = true;
                 IsRunning = false;
-                await App.Current.MainPage.DisplayAlert("Error", "Check the internet connection.", "Accept");
+                await App.Current.MainPage.DisplayAlert(
+                    "Error", 
+                    "Check the internet connection.", 
+                    "Accept");
                 return;
             }
 
@@ -97,7 +107,10 @@ namespace MyLeasing.Prism.ViewModels
             {
                 IsRunning = false;
                 IsEnabled = true;
-                await App.Current.MainPage.DisplayAlert("Error", "User or Password Incorrect", "Accept");
+                await App.Current.MainPage.DisplayAlert(
+                    "Error", 
+                    "User or Password Incorrect", 
+                    "Accept");
                 Password = string.Empty;
                 return;
             }
@@ -116,7 +129,10 @@ namespace MyLeasing.Prism.ViewModels
             {
                 IsRunning = false;
                 IsEnabled = true;
-                await App.Current.MainPage.DisplayAlert("Error", "Problem with User Data, Call IT Support", "Accept");
+                await App.Current.MainPage.DisplayAlert(
+                    "Error", 
+                    "Problem with User Data, Call IT Support", 
+                    "Accept");
                 return;
             }
 
