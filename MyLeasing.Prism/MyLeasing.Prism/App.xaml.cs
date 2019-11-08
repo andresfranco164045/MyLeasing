@@ -48,10 +48,11 @@ namespace MyLeasing.Prism
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.Register<IApiService, ApiService>();
+            containerRegistry.Register<IGeolocatorService, GeolocatorService>();
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<PropertiesPage, PropertiesPageViewModel>();
-containerRegistry.RegisterForNavigation<PropertyPage, PropertyPageViewModel>(); containerRegistry.RegisterForNavigation<ContractsPage, ContractsPageViewModel>();
+            containerRegistry.RegisterForNavigation<PropertyPage, PropertyPageViewModel>(); containerRegistry.RegisterForNavigation<ContractsPage, ContractsPageViewModel>();
             containerRegistry.RegisterForNavigation<ContractPage, ContractPageViewModel>();
             containerRegistry.RegisterForNavigation<PropertyTabbedPage, PropertyTabbedPageViewModel>();
             containerRegistry.RegisterForNavigation<LeasingMasterDetailPage, LeasingMasterDetailPageViewModel>();
